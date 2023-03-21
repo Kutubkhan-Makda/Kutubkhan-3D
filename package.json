@@ -1,9 +1,12 @@
 {
   "name": "kutubkhan_portfolio",
+  
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -14,6 +17,7 @@
     "@react-three/fiber": "^8.12.0",
     "@types/three": "^0.149.0",
     "framer-motion": "^10.6.1",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
