@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { styles } from '../styles'
-import {logo} from '../assets/index'
+import {logo, menu} from '../assets/index'
 import { navLinks } from '../Constants'
 
 const Navbar = () => {
@@ -19,7 +19,9 @@ const Navbar = () => {
             <li key={link.id} className={`${active===link.title ? 'text-white' : 'text-secondary'} hover:text-white text-[18px] cursor-pointer font-medium`} onClick={() => setActive(link.title)}><a href={`#${link.id}`}>{link.title}</a></li>
           ))}
         </ul>
-        <div></div>
+        <div className='sm:hidden flex flex-1 justify-end items-center'>
+            <img src={menu} alt="" />
+        </div>
       </div>
     </nav>
   )
