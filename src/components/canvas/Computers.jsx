@@ -14,6 +14,10 @@ const Computers = () => {
   )
 }
 
-const computerCanvas = () => {}
+const computerCanvas = () => {
+  return (
+    <Canvas/>
+  )
+}
 
 export default Computers
