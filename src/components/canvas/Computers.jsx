@@ -16,7 +16,7 @@ const Computers = () => {
 
 const computerCanvas = () => {
   return (
-    <Canvas/>
+    <Canvas></Canvas>
   )
 }
 
