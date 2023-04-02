@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls,Preload,useGLTF } from '@react-three/drei'
 
@@ -16,8 +16,10 @@ const Computers = () => {
 
 const computerCanvas = () => {
   return (
-    <Canvas frameloop='demand'>
-
+    <Canvas frameloop='demand' shadows camera={{position:[20,3,5],fov:25}} gl={{preserveDrawingBuffer:true}}>
+      <Suspense fallback={<CanvasLoader/>}>
+        <OrbitControls enableZoom={false}/>
+      </Suspense>
     </Canvas>
   )
 }
