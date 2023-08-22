@@ -217,6 +217,7 @@ import {
       ],
       image: carrent,
       source_code_link: "https://github.com/",
+      live_project_link: "",
     },
     {
       name: "Job IT",
@@ -238,6 +239,7 @@ import {
       ],
       image: jobit,
       source_code_link: "https://github.com/",
+      live_project_link: "",
     },
     {
       name: "Trip Guide",
@@ -259,6 +261,7 @@ import {
       ],
       image: tripguide,
       source_code_link: "https://github.com/",
+      live_project_link: "",
     },
   ];
   
