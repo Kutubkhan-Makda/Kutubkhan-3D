@@ -5,8 +5,24 @@ import SectionWrapper from '../hoc/SectionWrapper'
 import { fadeIn, textVariant } from '../Utils/motion'
 import { styles } from '../styles'
 import { projects } from '../Constants'
+import Tilt from 'react-tilt'
 
+const ProjectCard = ({index,name,description,tags,image,source_code_link}) => {
+  return(
+    <motion.div variants={fadeIn("up","spring",index*0.5,0.75)}>
+      <Tilt options={{max:45,scale:1,speed:450}} className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
+        <div className='relative w-full h-[230px]'>
+          <img src={image} alt={name} className='w-full h-full rounded-2xl object-cover' />
+          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+            <div onClick={()=>window.open(source_code_link,"_blank")} className='black-gradient'>
 
+            </div>
+          </div>
+        </div>
+      </Tilt>
+    </motion.div>
+  )
+}
 
 const Works = () => {
   return (
