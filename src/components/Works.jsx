@@ -22,9 +22,6 @@ const ProjectCard = ({index,name,description,tags,image,source_code_link,live_pr
               <img src={github} alt="git" className='w-10/12 h-10/12 object-contain' />
             </div>
           </span>
-          {/* <span className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            
-          </span> */}
         </div>
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
