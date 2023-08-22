@@ -4,6 +4,9 @@ import { github } from '../assets'
 import SectionWrapper from '../hoc/SectionWrapper'
 import { fadeIn, textVariant } from '../Utils/motion'
 import { styles } from '../styles'
+import { projects } from '../Constants'
+
+
 
 const Works = () => {
   return (
@@ -21,8 +24,10 @@ const Works = () => {
         and manage projects effectively.
       </motion.p>
     </div>
-    <div className='mt-20'>
-
+    <div className='mt-20 flex flex-wrap gap-7'>
+      {projects.map((project,index)=>(
+        <ProjectCard key={`project-${index}`} {...project} index={index}/>
+      ))}
     </div>
     </>
   )
