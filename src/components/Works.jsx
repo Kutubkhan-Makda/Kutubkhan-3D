@@ -13,16 +13,20 @@ const ProjectCard = ({index,name,description,tags,image,source_code_link,live_pr
       <Tilt options={{max:45,scale:1,speed:450}} className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
         <div className='relative w-full h-[230px]'>
           <img src={image} alt={name} className='w-full h-full rounded-2xl object-cover' />
-          <div className='absolute inset-0 flex justify-start m-3 card-img_hover'>
+          <span className='absolute inset-0 flex justify-start m-3 card-img_hover'>
             <div onClick={()=>window.open(live_project_link,"_blank")} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
               <img src={github} alt="git" className='w-10/12 h-10/12 object-contain' />
             </div>
-          </div>
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+          </span>
+          <span className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div onClick={()=>window.open(source_code_link,"_blank")} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
               <img src={github} alt="git" className='w-10/12 h-10/12 object-contain' />
             </div>
-          </div>
+          </span>
+        </div>
+        <div className='mt-5'>
+          <h3>{name}</h3>
+          <p>{description}</p>
         </div>
       </Tilt>
     </motion.div>
