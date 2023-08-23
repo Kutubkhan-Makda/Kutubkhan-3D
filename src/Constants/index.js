@@ -243,7 +243,7 @@ import {
         },
       ],
       image: jobit,
-      source_code_link: "https://github.com/MKhan1792/NetFilm",
+      source_code_link: "",
       live_project_link: "",
     },
     {
