@@ -221,8 +221,8 @@ import {
         },
       ],
       image: carrent,
-      source_code_link: "https://github.com/",
-      live_project_link: "",
+      source_code_link: "https://github.com/MKhan1792/NetFilm",
+      live_project_link: "https://mkhan1792.github.io/NetFilm/",
     },
     {
       name: "Job IT",
