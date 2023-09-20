@@ -1,7 +1,7 @@
 import React, { Suspense, useRef, useState } from 'react'
-import * as random from "maath/random/dist/maath-random.esm";
 import { Canvas, useFrame } from '@react-three/fiber';
 import { PointMaterial, Points, Preload } from '@react-three/drei';
+import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
   const ref = useRef();
@@ -18,20 +18,20 @@ const Stars = (props) => {
         <PointMaterial transparent color='#f272c8' size={0.002} sizeAttenuation={true} depthWrite={false}/>
       </Points>
     </group>
-  )
-}
+  );
+};
 
 const StarsCanvas = () => {
   return (
     <div className='w-full h-auto absolute z-[-1] inset-0'>
-      {/* <Canvas camera={{position:[0,0,1]}} gl={{preserveDrawingBuffer:true}}>
+      <Canvas camera={{position:[0,0,1]}} gl={{preserveDrawingBuffer:true}}>
         <Suspense fallback={null}>
           <Stars/>
         </Suspense>
         <Preload all/>
-      </Canvas> */}
+      </Canvas>
     </div>
-  )
-}
+  );
+};
 
 export default StarsCanvas
