@@ -13,9 +13,9 @@ const Stars = (props) => {
   });
 
   return (
-    <group rotation={[0, 0, Math.PI/4]}>
+    <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
-        <PointMaterial transparent color='#f272c8' size={0.002} sizeAttenuation={true} depthWrite={false}/>
+        <PointMaterial transparent color='#f272c8' size={0.002} sizeAttenuation={true} depthWrite={false} />
       </Points>
     </group>
   );
@@ -24,12 +24,12 @@ const Stars = (props) => {
 const StarsCanvas = () => {
   return (
     <div className='w-full h-auto absolute z-[-1] inset-0'>
-      <Canvas camera={{position:[0,0,1]}} gl={{preserveDrawingBuffer:true}}>
+      {/* <Canvas camera={{ position: [0, 0, 1] }} gl={{ preserveDrawingBuffer: true }}>
         <Suspense fallback={null}>
-          <Stars/>
+          <Stars />
         </Suspense>
-        <Preload all/>
-      </Canvas>
+        <Preload all />
+      </Canvas> */}
     </div>
   );
 };
